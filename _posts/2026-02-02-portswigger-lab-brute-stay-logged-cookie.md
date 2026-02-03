@@ -16,6 +16,7 @@ tags:
   - "Stay Logged In"
   - "Cookies"
   - "Brute Force"
+  - "Hashcat"
   - "Turbo Intruder"
   - "Burp Suite"
 ---
