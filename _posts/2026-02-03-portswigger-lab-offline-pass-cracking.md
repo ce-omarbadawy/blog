@@ -59,9 +59,7 @@ Once logged in, I checked the request to my account page:
 GET /my-account?id=wiener HTTP/2
 Host: 0a8500bd040f9d8380a40dbf00a00081.web-security-academy.net
 Cookie: session=pppNAr3YwlgyzEM44XIR0QpG1IN3QQ22; stay-logged-in=d2llbmVyOjUxZGMzMGRkYzQ3M2Q0M2E2MDExZTllYmJhNmNhNzcw
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
 Referer: https://0a8500bd040f9d8380a40dbf00a00081.web-security-academy.net/login
-Te: trailers
 ```
 
 That `stay-logged-in` cookie looked very familiar...

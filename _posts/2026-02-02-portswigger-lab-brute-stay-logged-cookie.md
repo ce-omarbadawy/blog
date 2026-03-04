@@ -116,9 +116,7 @@ I took my request and modified it like this:
 GET /my-account?id=carlos HTTP/2
 Host: 0ae8001403550fdd803dbcc900b50036.web-security-academy.net
 Cookie: session=; stay-logged-in=%s
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
 Referer: https://0ae8001403550fdd803dbcc900b50036.web-security-academy.net/login
-Te: trailers
 ```
 
 Changes made:

